@@ -11,6 +11,9 @@
 |
 */
 
+Route::get('/api/categories', 'CategoryController@index');
+Route::get('/api/categories/{id}/topics', 'CategoryController@topics');
+
 Route::any('{all}', function() {
 	return view('index');
 })
